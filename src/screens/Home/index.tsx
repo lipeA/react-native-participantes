@@ -41,7 +41,16 @@ export default function Home() {
   function handleParticipantRemove(name: string) {
     console.log(`Remove Participant: ${name}`);
 
-    Alert.alert("Remover", `remover o participante ${name}`);
+    Alert.alert("Remover", `remover o participante ${name}?`, [
+      {
+        text: "Sim",
+        onPress: () => Alert.alert("Participante removido"),
+      },
+      {
+        text: "Não",
+        style: "cancel",
+      },
+    ]);
   }
 
   return (
