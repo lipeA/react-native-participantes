@@ -10,32 +10,28 @@ import {
 } from "react-native";
 import { styles } from "./styles";
 import Participant from "../../components/Participant";
+import { useState } from "react";
 
 export default function Home() {
-  const Participantes = [
-    "felipe",
-    "joao",
-    "matrheus",
-    "pedro",
-    "mariaana",
-    "carlos",
-    "jose",
-    "maria",
-    "lucas",
-    "luiza",
-    "souza",
-    "assis",
-  ];
+  const [Participantes, setParticipantes] = useState<String[]>([]);
+  const [newParticipant, setNewParticipant] = useState("");
 
   function handleParticipantAdd() {
     console.log("Add Participant");
 
-    if (Participantes.includes("felipe")) {
+    if (Participantes.includes(newParticipant)) {
       return Alert.alert(
         "Erro ao cadastrar participante",
         "já existe um participante com esse nome"
       );
     }
+
+    setParticipantes((prevState) => [...prevState, newParticipant]);
+    Alert.alert(
+      "Participante adicionado",
+      `${newParticipant} foi adicionado com sucesso`
+    );
+    setNewParticipant("");
   }
 
   function handleParticipantRemove(name: string) {
@@ -63,6 +59,8 @@ export default function Home() {
           style={styles.input}
           placeholder="Nome do participante"
           placeholderTextColor="#6b6b6b"
+          onChangeText={setNewParticipant}
+          value={newParticipant}
         />
 
         <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
