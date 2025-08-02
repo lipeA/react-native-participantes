@@ -24,21 +24,22 @@ bash
 Copy
 Edit
 /src
- ├── components
- │    └── Participant.tsx     # Componente que exibe nome e botão de remover
- └── screens
-      └── Home.tsx            # Tela principal com lógica da lista de participantes
-      └── styles.ts           # Estilos da tela Home
+├── components
+│ └── Participant.tsx # Componente que exibe nome e botão de remover
+└── screens
+└── Home.tsx # Tela principal com lógica da lista de participantes
+└── styles.ts # Estilos da tela Home
 🧠 Como funciona?
+
 1. Adicionar Participante
-Usuário digita um nome no TextInput.
+   Usuário digita um nome no TextInput.
 
 Ao clicar no botão +, o nome é adicionado à lista se não estiver duplicado.
 
 É exibido um Alert confirmando a adição.
 
 2. Remover Participante
-O componente Participant exibe um botão de remoção.
+   O componente Participant exibe um botão de remoção.
 
 Ao clicar, é mostrada uma confirmação via Alert.
 
@@ -66,7 +67,9 @@ bash
 Copy
 Edit
 npm install
+
 # ou
+
 yarn
 Execute com o Expo ou CLI:
 
@@ -74,9 +77,13 @@ bash
 Copy
 Edit
 npm start
+
 # ou
+
 npx react-native run-android
+
 # ou
+
 npx react-native run-ios
 📌 Observações
 Certifique-se de que o componente Participant está corretamente criado e estilizado.
