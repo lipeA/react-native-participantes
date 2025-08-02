@@ -1,94 +1,57 @@
-📋 Lista de Participantes - App em React Native
-Este é um simples aplicativo desenvolvido em React Native que permite adicionar e remover participantes de um evento. O projeto tem como objetivo demonstrar o uso de componentes funcionais, hooks (como useState), e componentes básicos de UI como FlatList, Alert, TextInput e TouchableOpacity.
+# 📋 Lista de Participantes - App em React Native
 
-📱 Funcionalidades
-Adicionar participantes à lista.
+Este é um simples aplicativo desenvolvido em **React Native** que permite adicionar e remover participantes de um evento. O projeto tem como objetivo demonstrar o uso de **componentes funcionais**, **hooks** (como `useState`), e componentes básicos de UI como `FlatList`, `Alert`, `TextInput` e `TouchableOpacity`.
 
-Evitar duplicatas (alerta caso o nome já exista).
+## ✅ Funcionalidades
 
-Remover participantes com confirmação.
+- ➕ Adicionar participantes à lista
+- ❌ Remover participantes com confirmação
+- ⚠️ Prevenção de nomes duplicados
+- 📭 Exibição de mensagem caso a lista esteja vazia
 
-Interface simples e funcional, ideal para eventos, listas de presença, etc.
+## 🧪 Tecnologias Utilizadas
 
-🧩 Tecnologias Utilizadas
-React Native
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/) _(opcional, dependendo do setup)_
+- `useState`
+- Componentes nativos: `View`, `Text`, `FlatList`, `TextInput`, `TouchableOpacity`, `Alert`, etc.
 
-Expo (opcional, dependendo do setup)
+## 📁 Estrutura do Projeto
 
-Hooks (useState)
+## 🧠 Como funciona?
 
-Componentes básicos do React Native (View, Text, FlatList, Alert, etc.)
+### ➕ Adicionar Participante
 
-📂 Estrutura do Projeto
-bash
-Copy
-Edit
-/src
-├── components
-│ └── Participant.tsx # Componente que exibe nome e botão de remover
-└── screens
-└── Home.tsx # Tela principal com lógica da lista de participantes
-└── styles.ts # Estilos da tela Home
-🧠 Como funciona?
+- O usuário digita um nome no campo de texto.
+- Ao clicar no botão `+`, o nome é adicionado à lista se ainda não existir.
+- Um alerta de sucesso é exibido.
 
-1. Adicionar Participante
-   Usuário digita um nome no TextInput.
+### ❌ Remover Participante
 
-Ao clicar no botão +, o nome é adicionado à lista se não estiver duplicado.
+- O participante é exibido com um botão de remover.
+- Ao clicar, um `Alert` solicita confirmação.
+- Se confirmado, o nome é removido da lista.
 
-É exibido um Alert confirmando a adição.
+## 📸 Interface
 
-2. Remover Participante
-   O componente Participant exibe um botão de remoção.
+- Campo `TextInput` para digitar o nome do participante
+- Botão `+` para adicionar
+- Lista `FlatList` com todos os nomes adicionados
+- Texto exibido caso a lista esteja vazia
 
-Ao clicar, é mostrada uma confirmação via Alert.
+## ▶️ Como executar o projeto
 
-Se confirmado, o nome é removido da lista.
+### 1. Clone o repositório
 
-📸 Interface
-Campo de entrada para nome do participante.
+```bash
+git clone https://github.com/seu-usuario/seu-repo.git
 
-Botão para adicionar.
 
-Lista dinâmica com nomes e opção de remover.
-
-Mensagem caso a lista esteja vazia.
-
-🚀 Como rodar o projeto
-Clone o repositório:
-
-bash
-Copy
-Edit
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-Instale as dependências:
-
-bash
-Copy
-Edit
+2. Instale as dependências
 npm install
-
 # ou
-
 yarn
-Execute com o Expo ou CLI:
 
-bash
-Copy
-Edit
-npm start
-
-# ou
-
-npx react-native run-android
-
-# ou
-
-npx react-native run-ios
-📌 Observações
-Certifique-se de que o componente Participant está corretamente criado e estilizado.
-
-A estilização usada está importada de ./styles, certifique-se de que o arquivo styles.ts está disponível com os estilos correspondentes.
-
-📄 Licença
-Este projeto está sob a licença MIT.
+3. Execute o projeto
+npx expo start
+```
